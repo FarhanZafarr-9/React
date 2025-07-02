@@ -28,7 +28,7 @@ export const info = [
     { name: "Age", value: "20" },
     { name: "Profession", value: "Student" },
     { name: "Education", value: "Intermediate (Completed)" },
-    { name: "Current Study", value: "BS Data Science" },
+    { name: "Current Study", value: "BS Data Science (2023-2027)" },
     { name: "University", value: "FAST NUCES, Lahore" },
     { name: "Passion", value: "Programming" },
     { name: "Date of Birth", value: "August 21, 2004" },
