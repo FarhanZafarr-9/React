@@ -1,6 +1,4 @@
-import React, { useEffect, useState } from 'react'
-import { FaEye, FaEyeSlash, FaCheck } from "react-icons/fa";
-import { RxCross1 } from "react-icons/rx";
+import { useEffect, useState } from 'react'
 
 const InputForm = ({ isDarkMode }) => {
 
@@ -19,10 +17,14 @@ const InputForm = ({ isDarkMode }) => {
 
     function validator() {
         const specialChars = /[!@#$\/%^&*(),.?":{}|<>]/;
-        const emailPattern = /^[A-Za-z0-9._%+-]+@(gmail|gamil)\.com$/;
+        const emailPattern = /^[A-Za-z0-9._%+-]+@(gmail)\.com$/;
 
         if (!name || /[0-9]/.test(name) || specialChars.test(name)) {
             setMessage('Name can only have valid characters.');
+            return;
+        }
+        if (!email || !emailPattern.test(email)) {
+            setMessage('Email must be a valid gmail.com address.');
             return;
         }
         if (!country || /[0-9]/.test(country) || specialChars.test(country)) {
@@ -41,10 +43,6 @@ const InputForm = ({ isDarkMode }) => {
             setMessage('Phone can only have valid characters.');
             return;
         }
-        if (!email || !emailPattern.test(email)) {
-            setMessage('Email must be a valid gamil.com address.');
-            return;
-        }
         setMessage('Passed');
     }
 
@@ -56,7 +54,7 @@ const InputForm = ({ isDarkMode }) => {
             <div className='flex w-full gap-[5%] justify-around items-center'>
                 <input
                     type='text'
-                    className={` outline-none focus:outline-none flex items-center justify-between gap-2 rounded-md border-[0.75px] ${isDarkMode ? 'bg-[#222222] border-[#555555] text-white' : 'bg-[#e0e0e0] border-[#aaa] text-black'} px-3 py-2 my-4 w-[70%]`}
+                    className={` outline-none focus:outline-none flex items-center justify-between gap-2 rounded-md border-[0.75px] ${isDarkMode ? 'bg-[#222222] border-[#555555] text-white' : 'bg-[#e0e0e0] border-[#aaa] text-black'} px-3 py-2 my-4  w-[70%]`}
                     onChange={e => setName(e.target.value)}
                     placeholder='Name'
                 />

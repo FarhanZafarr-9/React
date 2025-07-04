@@ -21,3 +21,26 @@ body {
     scrollbar-width: none;
     /* Firefox */
 }
+
+/* Custom scrollbar for Chrome, Edge, Safari */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 4px;
+    /* Thinner scrollbar */
+    background: transparent;
+    /* No background color */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #888;
+    /* Grey color for the thumb */
+    border-radius: 2px;
+    /* Slightly rounded edges */
+}
+
+/* For Firefox */
+.custom-scrollbar {
+    scrollbar-width: thin;
+    /* Thin scrollbar */
+    scrollbar-color: #888 transparent;
+    /* Grey thumb with no track color */
+}
