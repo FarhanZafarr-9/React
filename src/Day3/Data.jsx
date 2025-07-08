@@ -1,3 +1,7 @@
+
+import { FaRegSun, FaMoon } from "react-icons/fa";
+import { MdComputer, MdDashboard, MdViewColumn, MdViewSidebar, MdUnfoldLess, MdHorizontalRule, MdFilterNone } from "react-icons/md";
+
 export const groceries = [
     // Cereals & Grains (9 items)
     { name: "Oats", type: ["Cereal", "Healthy"], price: 200, quantity: "1kg" },
@@ -88,3 +92,20 @@ export const groceries = [
     { name: "Garam Masala", type: "Pantry", price: 95, quantity: "100g" },
     { name: "Soy Sauce", type: "Pantry", price: 85, quantity: "200ml" }
 ];
+
+export const themes = [
+    { name: "Light", value: "light", icon: <FaRegSun /> },
+    { name: "Dark", value: "dark", icon: <FaMoon /> },
+];
+
+export const navigationModes = [
+    { name: "Floating", value: "floating", icon: <MdDashboard /> },
+    { name: "Fixed", value: "fixed", icon: <MdViewColumn /> },
+];
+
+export const headerModes = [
+    { name: "Fixed", value: "fixed", icon: <MdHorizontalRule /> },
+    { name: "Floating", value: "floating", icon: <MdFilterNone /> }
+];
+
+
