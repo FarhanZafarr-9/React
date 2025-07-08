@@ -14,16 +14,14 @@ const PreferencesManager = () => {
   const [openManager, setOpenManager] = React.useState(false);
 
   return (
-    <div className={`absolute ${navigationMode === 'fixed' ? 'right-0 bottom-0' : 'right-10 bottom-10 rounded-lg'}  flex flex-col items-center justify-center z-10 p-6 px-4 min-w-[400px] max-w-[400px] transition-all duration-300 ease-in-out`}
+    <div className={`absolute ${navigationMode === 'fixed' ? 'right-0 bottom-0' : 'right-10 bottom-10 rounded-lg'}  flex flex-col items-center justify-center z-10 p-6 px-4 min-w-[400px] max-w-[400px] transition-all duration-300 ease-in-out ${openManager ? 'pointer-events-auto' : 'pointer-events-none'}`}
       style={{
         background: openManager ? colors.cardBackground : 'transparent', color: colors.textPrimary,
-        borderBottom: `${navigationMode === 'fixed' ? 'none' : `1px`}`,
-        borderRight: `${navigationMode === 'fixed' ? 'none' : `1px`}`,
-        borderTop: `1px`,
-        borderLeft: `1px`,
-        boxShadow: openManager ? `0 2px 10px rgba(0, 0, 0, 0.1)` : 'none',
-        borderColor: openManager ? colors.border : 'transparent',
-        borderStyle: openManager ? 'solid' : 'none',
+        border: (() => {
+          if (navigationMode === 'fixed') return '1px solid transparent';
+          return openManager ? `1px solid ${colors.border}` : 'none';
+        })(),
+        boxShadow: openManager ? '0 2px 10px rgba(0, 0, 0, 0.1)' : 'none',
       }}
         
     >
@@ -62,7 +60,7 @@ const PreferencesManager = () => {
 
         </div>
       </div>
-      <button onClick={() => setOpenManager(!openManager)} className={`font-semibold mt-4 px-4 py-2 rounded-md w-full select-none`} style={{ background: colors.backgroundTertiary, color: colors.textPrimary, border: `1px solid ${colors.border}` }}>
+      <button onClick={() => setOpenManager(!openManager)} className={`font-semibold mt-4 px-4 py-2 rounded-md w-full select-none pointer-events-auto`} style={{ background: colors.backgroundTertiary, color: colors.textPrimary, border: `1px solid ${colors.border}` }}>
         {openManager ? 'Close Preferences' : 'Open Preferences'}
       </button>
     </div>

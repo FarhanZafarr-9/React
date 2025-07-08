@@ -16,7 +16,7 @@ const Day_1 = ({ isDarkMode }) => {
   return (
     <div className={`relative flex flex-col items-center justify-center h-screen w-screen ${isDarkMode ? 'bg-[#121212]' : 'bg-[#dedede]'} transition-all duration-300 ease-in-out`}>
 
-      <DayHeader isDarkMode={isDarkMode} num={1} />
+      <DayHeader isDarkMode={isDarkMode} num={'Day 1'} />
 
       <ThemeToggle />
       <Counter isDarkMode={isDarkMode} counts={count} />
