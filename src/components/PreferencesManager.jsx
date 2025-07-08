@@ -17,12 +17,13 @@ const PreferencesManager = () => {
     <div className={`absolute ${navigationMode === 'fixed' ? 'right-0 bottom-0' : 'right-10 bottom-10 rounded-lg'}  flex flex-col items-center justify-center z-10 p-6 px-4 min-w-[400px] max-w-[400px] transition-all duration-300 ease-in-out`}
       style={{
         background: openManager ? colors.cardBackground : 'transparent', color: colors.textPrimary,
-        borderBottom: `${navigationMode === 'fixed' ? 'none' : `1px solid ${colors.border}`}`,
-        borderRight: `${navigationMode === 'fixed' ? 'none' : `1px solid ${colors.border}`}`,
-        borderTop: `1px solid ${colors.border}`,
-        borderLeft: `1px solid ${colors.border}`,
+        borderBottom: `${navigationMode === 'fixed' ? 'none' : `1px`}`,
+        borderRight: `${navigationMode === 'fixed' ? 'none' : `1px`}`,
+        borderTop: `1px`,
+        borderLeft: `1px`,
         boxShadow: openManager ? `0 2px 10px rgba(0, 0, 0, 0.1)` : 'none',
         borderColor: openManager ? colors.border : 'transparent',
+        borderStyle: openManager ? 'solid' : 'none',
       }}
         
     >

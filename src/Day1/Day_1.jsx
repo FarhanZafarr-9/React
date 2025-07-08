@@ -5,7 +5,7 @@ import Counter from './components/Counter';
 
 import AllCounters from './components/AllCounters';
 
-const Day_1 = ({ isDarkMode, setIsDarkMode }) => {
+const Day_1 = ({ isDarkMode }) => {
 
   const [count, setCount] = useState(0);
 
@@ -18,7 +18,7 @@ const Day_1 = ({ isDarkMode, setIsDarkMode }) => {
 
       <DayHeader isDarkMode={isDarkMode} num={1} />
 
-      <ThemeToggle isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
+      <ThemeToggle />
       <Counter isDarkMode={isDarkMode} counts={count} />
       < AllCounters isDarkMode={isDarkMode} count={count} onclick={clickHandler} />
     </div>

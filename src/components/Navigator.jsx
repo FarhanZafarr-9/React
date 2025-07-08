@@ -23,11 +23,13 @@ const Navigator = () => {
             className={`absolute  ${navigationMode === 'fixed' ? 'bottom-0 left-0' : 'bottom-10 left-10 rounded-lg'}  max-w-[200px] min-w-[200px] flex flex-col items-center justify-between p-4 transition-all duration-200 ease-in-out z-10`}
             style={{
                 background: expanded ? colors.cardBackground : 'transparent',
-                borderBottom: `${navigationMode === 'fixed' ? 'none' : `1px solid ${colors.border}`}`,
-                borderLeft: `${navigationMode === 'fixed' ? 'none' : `1px solid ${colors.border}`}`,
-                borderTop: `1px solid ${colors.border}`,
-                borderRight: `1px solid ${colors.border}`,
+                borderBottom: `${navigationMode === 'fixed' ? 'none' : `1px`}`,
+                borderLeft: `${navigationMode === 'fixed' ? 'none' : `1px`}`,
+                borderTop: `1px`,
+                borderRight: `1px`,
                 borderColor: expanded ? colors.border : 'transparent',
+                boxShadow: expanded ? `0 2px 10px rgba(0, 0, 0, 0.1)` : 'none',
+                borderStyle: expanded ? 'solid' : 'none',
             }}
         >
             <div className='flex flex-col items-center w-full justify-center' style={{ transform: expanded ? 'scaleY(1)' : 'scaleY(0)', transition: 'transform 0.3s ease-in-out' }}>
