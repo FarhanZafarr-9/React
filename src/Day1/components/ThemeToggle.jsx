@@ -1,13 +1,15 @@
 import { useState } from 'react'
 import { FaMoon } from "react-icons/fa6";
 import { IoIosSunny } from "react-icons/io";
+import { useTheme } from '../../utils/ThemeContext';
 
 const ThemeToggle = ({ isDarkMode, setIsDarkMode, onclick }) => {
 
     const [isHover, setIsHover] = useState(false);
+    const { headerMode } = useTheme();
 
     return (
-        <div className='absolute top-6 right-4 flex justify-center items-center ' onClick={onclick}>
+        <div className={`absolute ${headerMode === 'fixed' ? 'top-6 right-4' : 'top-16 right-32'} flex justify-center items-center `} onClick={onclick}>
             {/* theme name */}
             <div className={`${isDarkMode ? 'bg-[#282828] text-[#f0f0f0]' : 'bg-[#dedede] text-[#282828]'} rounded-lg p-2 absolute w-[175%] translate-x-[-100%] border-[0.75px] border-[#55555555]  h-auto cursor-pointer text-sm font-bold flex justify-center items-center ${isHover ? 'scale-100' : 'scale-0'}
                 transition-all duration-300 ease-in-out`}>
