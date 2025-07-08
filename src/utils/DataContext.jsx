@@ -5,9 +5,9 @@ const USER_DATA_KEY = 'userData';
 
 // Initial data structure
 const initialUserData = {
-    name: '',
-    profession: '',
-    hobbies: []
+    name: 'Farhan Zafar',
+    profession: 'Data Scientist',
+    hobbies: ['Coding', 'Reading', 'Gaming']
 };
 
 const DataContext = createContext(null);
