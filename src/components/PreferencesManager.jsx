@@ -97,8 +97,8 @@ const PreferencesManager = () => {
         onClick={() => setOpenManager(!openManager)}
         className="font-semibold mt-4 px-4 py-2 rounded-md w-full select-none pointer-events-auto hover:opacity-80 transition-opacity"
         style={{
-          background: colors.buttonNeutralText,
-          color: colors.buttonNeutral,
+          background: colors.buttonContrast,
+          color: colors.buttonContrastText,
           border: `1px solid ${colors.border}`
         }}
       >

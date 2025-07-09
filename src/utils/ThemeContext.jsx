@@ -12,19 +12,22 @@ const palettes = {
         backgroundPrimary: '#ffffff',
         backgroundSecondary: '#f5f5f5',
         backgroundTertiary: '#eeeeee',
+        backgroundContrast: '#181818', // For dark elements on light theme
 
         // Card colors
         cardBackground: '#ffffff',
         cardBackgroundSecondary: '#f8f8f8',
         cardBorder: 'rgba(0, 0, 0, 0.08)',
+        cardContrast: '#202020', // For dark cards on light theme
 
         // Text colors
         textPrimary: '#181818',
         textSecondary: '#444444',
         textTertiary: '#888888',
         textInverted: '#ffffff',
+        textContrast: '#fefefe', // For light text on dark elements
 
-        // Button colors
+        // Button colors - Standard
         buttonNeutral: '#f5f5f5',
         buttonNeutralText: '#181818',
         buttonNeutralBorder: '#e0e0e0',
@@ -37,10 +40,16 @@ const palettes = {
         buttonNegativeText: '#991b1b',
         buttonNegativeBorder: 'rgba(239, 68, 68, 0.24)',
 
+        // Button colors - Contrast (dark buttons)
+        buttonContrast: '#181818',
+        buttonContrastText: '#fefefe',
+        buttonContrastBorder: '#555555',
+
         // UI elements
         divider: 'rgba(0, 0, 0, 0.08)',
         border: '#e0e0e0',
         highlight: 'rgba(0, 0, 0, 0.04)',
+        subtleBorder: '#aaa', // For subtle borders like in your component
 
         // Modal
         modalBackground: '#ffffff',
@@ -54,25 +63,35 @@ const palettes = {
         switchTrack: '#e0e0e0',
         switchTrackActive: '#888888',
         switchThumb: '#ffffff',
+
+        // Specific colors from your component
+        searchBackground: '#e0e0e0',
+        searchBorder: '#aaa',
+        filterActiveBg: '#181818',
+        filterActiveText: '#ffffff',
+        quantityIndicator: 'rgba(0, 0, 0, 0.2)'
     },
     dark: {
         // Background colors
         backgroundPrimary: '#121212',
         backgroundSecondary: '#1e1e1e',
         backgroundTertiary: '#242424',
+        backgroundContrast: '#f5f5f5', // For light elements on dark theme
 
         // Card colors
         cardBackground: '#181818',
         cardBackgroundSecondary: '#202020',
         cardBorder: 'rgba(255, 255, 255, 0.08)',
+        cardContrast: '#e0e0e0', // For light cards on dark theme
 
         // Text colors
         textPrimary: '#fefefe',
         textSecondary: '#bbbbbb',
         textTertiary: '#888888',
         textInverted: '#181818',
+        textContrast: '#181818', // For dark text on light elements
 
-        // Button colors
+        // Button colors - Standard
         buttonNeutral: '#2a2a2a',
         buttonNeutralText: '#fefefe',
         buttonNeutralBorder: '#3a3a3a',
@@ -85,10 +104,16 @@ const palettes = {
         buttonNegativeText: '#fca5a5',
         buttonNegativeBorder: 'rgba(252, 165, 165, 0.24)',
 
+        // Button colors - Contrast (light buttons)
+        buttonContrast: '#fefefe',
+        buttonContrastText: '#181818',
+        buttonContrastBorder: '#e0e0e0',
+
         // UI elements
         divider: 'rgba(255, 255, 255, 0.08)',
         border: '#55555555',
         highlight: 'rgba(255, 255, 255, 0.04)',
+        subtleBorder: '#555555', // For subtle borders like in your component
 
         // Modal
         modalBackground: '#1e1e1e',
@@ -102,6 +127,15 @@ const palettes = {
         switchTrack: '#444444',
         switchTrackActive: '#888888',
         switchThumb: '#f5f5f5',
+
+        // Specific colors from your component
+        searchBackground: '#222222',
+        searchBorder: '#555555',
+        filterActiveBg: '#dfdfdf',
+        filterActiveText: '#000000',
+        quantityIndicator: 'rgba(255, 255, 255, 0.2)',
+        highlightBg: '#fefefe', // For highlighted text background
+        highlightText: '#000000' // For highlighted text
     }
 };
 
