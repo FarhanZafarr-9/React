@@ -219,7 +219,7 @@ const HomeComponent = () => {
                 isOpen={hobbyModalOpen}
                 onRequestClose={closeHobbyModal}
                 className="outline-none"
-                overlayClassName="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+                overlayClassName="fixed inset-0 bg-[rgba(0,0,0,0.5)] bg-opacity-50 flex items-center justify-center z-50"
                 contentLabel={editingHobby ? "Edit Hobby" : "Add Hobby"}
             >
                 <div
