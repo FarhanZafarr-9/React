@@ -1,7 +1,7 @@
 import React from 'react'
 import DayHeader from '../components/DayHeader'
-import PasswordValidator from './Components.jsx/PasswordValidator'
-import InputForm from './Components.jsx/InputForm'
+import PasswordValidator from './Components/PasswordValidator'
+import InputForm from './Components/InputForm'
 
 const Day_2 = ({ isDarkMode }) => {
     return (

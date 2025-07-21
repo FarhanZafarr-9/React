@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import DayHeader from './DayHeader'
 import { useTheme } from '../utils/ThemeContext'
 import { useData } from '../utils/DataContext'
-import profile from '../assets/logo.png'
+import profile from '../../assets/logo.png'
 import { RiEditFill, RiAddFill, RiCloseFill } from "react-icons/ri";
 import Modal from 'react-modal'
 
@@ -167,8 +167,8 @@ const HomeComponent = () => {
                     </div>
 
                     <div className="flex flex-wrap gap-2 min-h-[50px] p-3 rounded-lg" style={{ backgroundColor: colors.backgroundSecondary }}>
-                        {hobbies.length > 0 ? (
-                            hobbies.map((hobby, index) => (
+                        {userData.hobbies.length > 0 ? (
+                            userData.hobbies.map((hobby, index) => (
                                 <div
                                     key={index}
                                     className="flex items-center gap-2 px-3 py-1 rounded-full text-sm font-medium group hover:translate-0.5 transition-transform"
